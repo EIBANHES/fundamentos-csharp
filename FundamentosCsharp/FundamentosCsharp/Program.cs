@@ -1,1 +1,9 @@
-﻿Console.WriteLine("Hello, World!");
+﻿namespace FundamentosCsharp;
+
+class Program
+{
+    static void Main()
+    {
+        
+    }
+}
