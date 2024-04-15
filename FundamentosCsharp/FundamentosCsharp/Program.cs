@@ -4,17 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        string nome = RetornaNome("Emanuel", "Ibanhes");
-        Console.WriteLine(nome);
-    }
+        var arr = new string[2];
+        arr[0] = "item 1";
+        var arr2 = arr;
 
-    static void MeuMetodo()
-    {
-        Console.WriteLine("C# é legal");
-    }
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
 
-    static string RetornaNome(string nome, string sobrenome, int idade = 18)
-    {
-        return $"{nome} {sobrenome}";
-    }
+        arr[0] = "item 2";
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
+    }    
 }
