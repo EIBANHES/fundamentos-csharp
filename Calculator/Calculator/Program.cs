@@ -21,7 +21,7 @@
 
         switch (res)
         {
-            case 0: Console.WriteLine("Saindo");
+            case 0: System.Environment.Exit(0); // sair do sistema
                 break;
             case 1: Soma();
                 break;
