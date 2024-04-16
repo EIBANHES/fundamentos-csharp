@@ -25,7 +25,18 @@
 
     static void Abrir()
     {
+        Console.Clear();
+        Console.WriteLine("Qual o caminho do arquivo?");
+        string path = Console.ReadLine();
 
+        using (var file = new StreamReader(path))
+        {
+            string text = file.ReadToEnd(); // le o arquivo ate o final
+            Console.WriteLine(text);
+        }
+        Console.WriteLine("");
+        Console.ReadLine();
+        Menu();
     }
 
     static void Editar()
