@@ -42,6 +42,22 @@
         }
         while (Console.ReadKey().Key != ConsoleKey.Escape);
 
-        Console.Write(text);
+        Salvar(text);
+    }
+
+    static void Salvar(string text)
+    {
+        Console.Clear();
+        Console.WriteLine("Qual caminho para salvar o arquivo???");
+        var path = Console.ReadLine();
+
+        using (var file = new StreamWriter(path)) // abre e fecha o objeto
+        {
+            file.Write(text);
+        }
+
+        Console.WriteLine($"O arquivo {path} foi salvo com sucesso!");
+        Console.ReadLine();
+        Menu();
     }
 }
